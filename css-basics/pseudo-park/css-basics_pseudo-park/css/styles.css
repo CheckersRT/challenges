@@ -18,6 +18,7 @@
   overflow: hidden;
   border-radius: 8px;
   background-color: lightgoldenrodyellow;
+  font-size: 32px;
 }
 
 .animal {
@@ -46,7 +47,6 @@
 .dino {
   text-align: right;
 }
-
 /* 
   The animals want some color! 🎨
   When the mouse hovers over an animal, change the background color.
