@@ -14,6 +14,7 @@
     flex-basis: auto;
     flex-grow: 1;
     border: 1px black solid;
+    min-width: 380px;
 
     display: flex;
     flex-direction: row;
@@ -23,6 +24,7 @@
 .topic-item-component {
     /* border: solid 1px black; */
     gap: 10px;
+    /* min-width: 450px; */
 }
 
 .topic-item-component-knob {
@@ -38,10 +40,11 @@
 }
 
 .topic-item-component-text {
-    padding: 10px;
+    /* padding: 10px; */
     flex-grow: 1;
     height: 220px;
     position: relative;
+    /* min-width: 300px; */
 }
 
 .topic-item-component-knob-title {
@@ -76,27 +79,30 @@ h4 {
 .topic-item-component-text img {
     display: block;
     width: 100%;
-    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
 }
 
 .topic-photo {
     /* height: 250px; */
     opacity: 1;
+    height: 100%;
     transition: 
-    opacity 2s;
+    /* opacity 2s */
+    height 2s;
     position: absolute;
-
 }
 
 .topic-text {
     position: absolute;
-    width: 325px;
+    /* width: 325px; */
     /* border: solid 1px black; */
     padding: 15px;
     line-height: 1.4;
 }
 
 .topic-photo:hover {
-    opacity: 0;
+    /* opacity: 0; */
+    height: 0;
 }
 
