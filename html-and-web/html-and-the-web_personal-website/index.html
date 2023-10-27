@@ -4,70 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tom Dent</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/global.css">
   </head>
   <body>
-    <section id="tom-dent">
-      <h1>Tom Dent</h1>
-    </section>
-    <section id="about-me">
-      <h2>About</h2>
-      <p></p>
-      <img src="" alt="tom dent">
-    </section>
-    <section id="coding">
-      <h2>Code</h2>
-      <article>
-        <span class="bold">What I know:</span> HTML, CSS, Javascript<br />
-        <span class="bold">What I want to know:</span> React, Python<br />
-        <span class="bold">What I've done with it so far:</span><br />
-        <ul>
-          <li>A website to guide you through a triathlon</li>
-          <li>A gimic website about indoor cycling</li>
-          <li>This website!</li>
-        </ul>
-      </article>
-    </section>
-    <section id="triathlon">
-      <h2>Triathlon</h2>
-      <article>
-        <span class="bold">Completed this year:</span><br />
-        <ul>
-          <li>Ironman Mallorca 70.3</li>
-          <li>Exterra Zittau</li>
-          <li>Ironman Erkner 70.3</li>
-        </ul>
-        <span class="bold">Goals next year:</span><br />
-        <ul>
-          <li>Berlin Half-Marathon</li>
-          <li>Ironman Mallorca 70.3</li>
-          <li>Ironman Cascais (Portugal)</li>
-        </ul>
-      </article>
-    </section>
-    <section id="music">
-      <h2>Music</h2>
-      <article>
-        Let me know what you think of:<br />
-        <ul>
-          <li><a href="">My techno</a></li>
-          <li><a href="">My electronica</a></li>
-          <li><a href="">My glitch-hop</a></li>
-        </ul>
-      </article>
-    </section>
-    <section id="education">
-      <h2>Book</h2>
-      <article>
-        While working in electronic music education in the UK, I wrote a book
-        about DJ-ing. The goal was to create a resource for a younger generation
-        discovering the desks as an instrument.
-      </article>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <span class="bold">Email:</span> tomdent991@hotmail.com<br />
-      <span class="bold">Phone:</span> +4915156076349<br />
-      <span class="bold">Insta:</span> tom_checkers<br />
-    </section>
+    <main>
+      <section id="tom-dent">
+        <h1>Tom Dent</h1>
+      </section>
+      <div class="topic-container">
+        <section class="topic-item" id="about-me">
+          <div class="topic-item-component topic-item-component-knob">
+            <img src="./assets/4101544-200.png" alt="mixer knob">
+            <div class="topic-item-component-knob-title">
+            <h2>About</h2>
+          </div>
+          </div>
+          <div class="topic-item-component topic-item-component-text">
+            <p></p>
+          </div>
+        </section>
+        <section class="topic-item" id="coding">
+          <div class="topic-item-component topic-item-component-knob">
+            <img src="./assets/4101544-200.png" alt="mixer knob">
+            <h2>Code</h2>
+          </div>
+            <div class="topic-item-component topic-item-component-text">
+            <article>
+              <span class="bold">What I know:</span> HTML, CSS, Javascript<br />
+              <span class="bold">What I want to know:</span> React, Python<br />
+              <span class="bold">What I've done with it so far:</span><br />
+              <ul>
+                <li>A website to guide you through a triathlon</li>
+                <li>A gimic website about indoor cycling</li>
+                <li>This website!</li>
+              </ul>
+            </article>
+        </div>
+        </section>
+        <section class="topic-item" id="triathlon">
+          <div class="topic-item-component topic-item-component-knob">
+            <img src="./assets/4101544-200.png" alt="mixer knob">
+            <h2>Triathlon</h2>
+          </div>
+          <div class="topic-item-component topic-item-component-text">
+            <article>
+              <ul><h4>Completed this year:</h4>
+                <li>Ironman Mallorca 70.3</li>
+                <li>Exterra Zittau</li>
+                <li>Ironman Erkner 70.3</li>
+              </ul>
+              <ul><h4>Goals next year:</h4>
+                <li>Berlin Half-Marathon</li>
+                <li>Ironman Mallorca 70.3</li>
+                <li>Ironman Cascais (Portugal)</li>
+              </ul>
+            </article>
+        </div>
+        </section>
+        <section class="topic-item" id="music">
+          <div class="topic-item-component topic-item-component-knob">
+            <img src="./assets/4101544-200.png" alt="mixer knob">
+            <h2>Music</h2>
+          </div>
+          <div class="topic-item-component topic-item-component-text">
+
+            <article>
+              <ul><h4>Let me know what you think of my:</h4>
+                <li><a href="">Techno</a></li>
+                <li><a href="">Electronica</a></li>
+                <li><a href="">Glitch-hop</a></li>
+              </ul>
+            </article>
+        </div>
+        </section>
+        <section class="topic-item" id="education">
+          <div class="topic-item-component topic-item-component-knob">
+            <img src="./assets/4101544-200.png" alt="mixer knob">
+            <h2>Book</h2>
+          </div>
+          <div class="topic-item-component topic-item-component-text">
+            <article>
+              While working in electronic music education in the UK, I wrote a
+              book about DJ-ing. The goal was to create a resource for a younger
+              generation discovering the desks as an instrument.
+            </article>
+        </div>
+        </section>
+        <section class="topic-item" id="contact">
+          <div class="topic-item-component topic-item-component-knob">
+            <img src="./assets/4101544-200.png" alt="mixer knob">
+            <h2>Contact</h2>
+          </div>
+          <div class="topic-item-component topic-item-component-text">
+            <span class="bold">Email:</span> tomdent991@hotmail.com<br />
+            <span class="bold">Phone:</span> +4915156076349<br />
+            <span class="bold">Insta:</span> tom_checkers<br />
+        </div>
+        </section>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
