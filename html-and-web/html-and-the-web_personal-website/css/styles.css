@@ -14,6 +14,7 @@
     flex-basis: auto;
     flex-grow: 1;
     border: 1px black solid;
+    min-width: 380px;
 
     display: flex;
     flex-direction: row;
@@ -23,6 +24,7 @@
 .topic-item-component {
     /* border: solid 1px black; */
     gap: 10px;
+    /* min-width: 450px; */
 }
 
 .topic-item-component-knob {
@@ -34,12 +36,10 @@
 .topic-item-component-knob img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-.topic-item-component-text {
-    padding: 10px;
-    flex-grow: 1;
-}
+
 
 .topic-item-component-knob-title {
     position: absolute;
@@ -55,7 +55,54 @@ h3 {
     margin-top: 10px;
 }
 
+h4 {
+    margin-bottom: 8px;
+
+}
+
 .topic-item-component-text li {
     margin-left: 25px;
 
 }
+
+.topic-item-component-text ul {
+    margin-bottom: 10px;
+
+}
+
+.topic-text {
+    position: absolute;
+    /* width: 325px; */
+    /* border: solid 1px black; */
+    padding: 15px;
+    line-height: 1.4;
+}
+
+/* image and transition */
+
+.topic-item-component-text {
+    flex-grow: 1;
+    height: 220px;
+    width: auto;
+    position: relative;
+}
+
+.topic-photo {
+    /* height: inherit; */
+    position: absolute;
+    /* transition: 
+    height 2s; */
+}
+
+.topic-photo img {
+    display: block;
+    width: 100%; 
+    height: auto;
+    position: absolute;
+}
+
+.topic-item-component-text:hover {
+    /* opacity: 0; */
+    /* height: 0; */
+}
+
