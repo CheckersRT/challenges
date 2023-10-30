@@ -30,15 +30,31 @@ body {
   color: var(--white);
 }
 
+
+
+
+/* 1 .Center image */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile__image {
   border-radius: 50%;
   max-width: 50%;
   height: auto;
+  align-self: center;
 }
+
+/* 2. Tech Stack */
 
 .tech-stack__list {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tech-stack__list-item {
