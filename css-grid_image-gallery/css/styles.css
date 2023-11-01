@@ -43,6 +43,8 @@ body {
   min-height: 100vh;
 
   /* Add styles to the grid container */
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .teaser-grid__teaser {
