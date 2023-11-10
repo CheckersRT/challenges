@@ -15,6 +15,15 @@ form.addEventListener("submit", (event) => {
   const data = Object.fromEntries(formData);
   console.log(data);
 
+// age + badnes sum
+console.log(formElements.age.value);
+  const ageBadness = Number(formElements.age.value) + Number(formElements.badness.value);
+  console.log(`The age-badness-sum of ${formElements.firstName.value} is ${ageBadness}`)
+
+
   event.target.reset();
   formElements.firstName.focus();
+
+
 });
+
