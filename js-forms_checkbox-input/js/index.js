@@ -17,8 +17,25 @@ form.addEventListener("submit", (event) => {
 
   // --v-- write your code here --v--
 
+  let formElements = event.target.elements;
+  console.log(formElements.tos.checked);
+  event.preventDefault();
+
+  if (formElements.tos.checked) {
+    alert("Form submitted");
+    return;
+  }
+});
+
   // --^-- write your code here --^--
 
   // eslint-disable-next-line no-alert
-  alert("Form submitted");
+
+tosCheckbox.addEventListener("input", (event) => {
+
+  console.log(event.target.checked);
+  if (event.target.checked) {
+    hideTosError();
+    return;
+  } showTosError();
 });
