@@ -3,6 +3,7 @@ console.clear();
 const form = document.querySelector('[data-js="form"]');
 const tosError = document.querySelector('[data-js="tos-error"]');
 const tosCheckbox = document.querySelector('[data-js="tos"]');
+const success = document.querySelector('[data-js="success"]')
 
 function hideTosError() {
   tosError.setAttribute("hidden", "");
@@ -11,6 +12,15 @@ function hideTosError() {
 function showTosError() {
   tosError.removeAttribute("hidden");
 }
+
+function showSuccessMessage() {
+  success.removeAttribute("hidden", "")
+}
+
+function hideSuccessMessage() {
+  success.setAttribute("hidden", "")
+}
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -23,9 +33,10 @@ form.addEventListener("submit", (event) => {
 
   if (formElements.tos.checked) {
     alert("Form submitted");
+    showSuccessMessage();
     // hideTosError();
     return;
-  } 
+  } hideSuccessMessage();
   // showTosError();
 
 });
