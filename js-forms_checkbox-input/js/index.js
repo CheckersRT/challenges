@@ -23,8 +23,11 @@ form.addEventListener("submit", (event) => {
 
   if (formElements.tos.checked) {
     alert("Form submitted");
+    // hideTosError();
     return;
-  }
+  } 
+  // showTosError();
+
 });
 
   // --^-- write your code here --^--
@@ -39,3 +42,5 @@ tosCheckbox.addEventListener("input", (event) => {
     return;
   } showTosError();
 });
+
+
