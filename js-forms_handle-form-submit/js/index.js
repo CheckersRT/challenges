@@ -12,15 +12,17 @@ form.addEventListener("submit", (event) => {
   //   console.log(formElements.complaint.value);
 
   const formData = new FormData(event.target);
+  console.log(formData);
+
   const data = Object.fromEntries(formData);
   console.log(data);
 
-  // age + badnes sum
-  console.log(formElements.age.value);
-  const ageBadness =
-    Number(formElements.age.value) + Number(formElements.badness.value);
-  console.log(`The age-badness-sum of ${data.firstName} is ${ageBadness}`);
+  // // age + badnes sum
+  // console.log(formElements.age.value);
+  // const ageBadness =
+  //   Number(formElements.age.value) + Number(formElements.badness.value);
+  // console.log(`The age-badness-sum of ${data.firstName} is ${ageBadness}`);
 
-  event.target.reset();
-  formElements.firstName.focus();
+  // event.target.reset();
+  // formElements.firstName.focus();
 });
