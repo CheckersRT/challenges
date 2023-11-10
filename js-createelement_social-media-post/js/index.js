@@ -17,22 +17,19 @@ const footer = document.createElement("footer");
 const span = document.createElement("span");
 const button = document.createElement("button");
 
-section.classList.add("post");
 document.body.append(section);
+section.classList.add("post");
 
 section.append(p);
-p.textContent = "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";;
 p.classList.add("post__content");
-
+p.textContent = "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";;
 
 section.append(footer);
 footer.classList.add("post__footer");
 
-
 footer.append(span);
 span.classList.add("post__username")
 span.textContent = "@username";
-
 
 footer.append(button);
 button.classList.add("post__button")
