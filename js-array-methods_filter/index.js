@@ -37,16 +37,34 @@ console.log(allCardsWith3Tags);
 
 
 const allCardsThatAreNotBookmarked = cards.filter((card) => {
-  return card.isBookmarked == true;
+  return card.isBookmarked == false;
 });
 
-console.log(allCardsThatAreNotBookmarked);
+// console.log(allCardsThatAreNotBookmarked);
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
-  return (card.tags[0] == "html" || card.tags[0] == "js") && card.isBookmarked == true;
-});
+const allCardsThatAreBookmarked = cards.filter(card => card.isBookmarked);
+
+console.log(allCardsThatAreBookmarked);
+
+function hasCardHtmlOrJs(card) {
+  for (const tag of card.tags) {
+    if (tag === "html" || tag ===  "js") {
+      console.log(tag);
+      return true
+    } 
+  } return false
+} 
+
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = allCardsThatAreBookmarked.filter(card => {
+  return hasCardHtmlOrJs(card);
+})
 
 console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked);
+
+
+// cards.filter((card) => {
+//   return (card.tags[0] == "html" || card.tags[0] == "js") && card.isBookmarked == true;
+// });
 
 
 
