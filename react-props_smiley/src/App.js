@@ -2,5 +2,14 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Smiley isHappy={true} isLaughing={true} />;
+}
+
+function Smiley({ isHappy, isLaughing }) {
+  return (
+    <div>
+      <span>{isHappy ? (isLaughing ? ":D" : ":)") : ":("}</span>
+      <p>Lol</p>
+    </div>
+  );
 }
