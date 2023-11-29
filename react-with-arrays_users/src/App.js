@@ -8,8 +8,10 @@ export default function App() {
   return (
     <main className="app">
       <Title text="ClientBoard" />
-      <div className="app__card-grid">
-        <Card user={USERS[0]} />
+      <div className="app__card-grid">{
+        USERS.map((user)=> (
+        <Card user={user} key={user.id} />))
+      }
       </div>
     </main>
   );
