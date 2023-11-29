@@ -1,11 +1,12 @@
 import Card from "./components/Card";
+import { fruits } from "./lib/fruits.js";
 
 export default function App() {
-  const fruits = [];
-
   return (
     <div className="app">
-      <Card name="🍌 banana" />
+      {fruits.map((fruit) => {
+        <Card key={fruit.id} name={fruit.name} />;
+      })}
     </div>
   );
 }
