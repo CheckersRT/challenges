@@ -1,38 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./StatusCheck.css";
 
 const apiStatusUrl = "https://example-apis.vercel.app/api/status";
 
 export default function StatusCheck() {
-  const [statusIcon, setStatusIcon]  = useState("⁉️");
-  // Something needs to change here…
-  // ↙️
+  const [statusIcon, setStatusIcon] = useState("⁉️");
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    handleCheckApiStatus();
+  })
+
+
   async function handleCheckApiStatus() {
-    /**
-     * Hint 1:
-     * Use the `fetch()` function and pass the `apiStatusUrl` into it
-     *
-     * Hint 2:
-     * The fetch function returns a promise which resolves to a Response
-     * object once it is ready.
-     *
-     * Hint 3:
-     * The Response object has a `ok` property which is true if the response
-     * is okay and false if it is not.
-     **/
-    // --v-- write your code here --v--
-    const response = await fetch(apiStatusUrl);
-    const answer = await response.json();
-
-    console.log(answer);
-
-    if (answer.status === "Ok") {
-      setStatusIcon("✅")
-    } else {
-      setStatusIcon("❌")
+    try {
+      console.log("click")
+      setLoading(true);
+      if (loading === true) {
+        console.log("loading");
+        setStatusIcon("⏳");
+      } else null;
+      
+      const response = await fetch(apiStatusUrl);
+      const answer = await response.json();
+      
+      if (response.ok) {
+        setStatusIcon("✅");
+      } else {
+        setStatusIcon("❌");
+      }
+      setLoading(false);
+      console.log(answer);
+      
+    } catch (error) {
+      setStatusIcon("🚨")
     }
-
-    // --^-- write your code here --^--
   }
 
   return (
