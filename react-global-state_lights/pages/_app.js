@@ -1,6 +1,6 @@
 import GlobalStyle from "../styles";
 import Layout from "../components/Layout";
-import { useState } from "react";
+import { use, useState } from "react";
 
 const initialLights = [
   {id: 1, name: "Living Room" ,isOn: false}, 
@@ -15,15 +15,27 @@ const initialLights = [
 
 export default function App({ Component, pageProps }) {
   const [lights, setLights] = useState(initialLights);
+  const [$isDimmed, setIsDimmed] = useState(false)
+  const sumOfOnLights = lights.filter(light => light.isOn === true).length
+  console.log(sumOfOnLights);
 
   function handleToggle(id) {
     setLights(lights.map((light) => light.id === id ? {...light, isOn: !light.isOn} : light))
   }
 
+  function handleAllOff() {
+    setLights(lights.map(light => ({...light, isOn: false})));
+    setIsDimmed(true)
+  }
+
+  function handleAllOn() {
+    setLights(lights.map(light => ({...light, isOn: true})))
+  }
+
   return (
-    <Layout>
+    <Layout isDimmed={$isDimmed}>
       <GlobalStyle />
-      <Component {...pageProps} lights={lights} onToggle={handleToggle}/>
+      <Component {...pageProps} lights={lights} onToggle={handleToggle} sumOfOnLights={sumOfOnLights} allOff={handleAllOff} allOn={handleAllOn}/>
     </Layout>
   );
 }
