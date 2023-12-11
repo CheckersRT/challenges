@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { StyledForm, StyledInputContainer } from "./Form.styled";
+import { useImmer } from "use-immer";
+import { preconnect } from "react-dom";
 
 export default function Form() {
-  const [mountain, setMountain] = useState({
+  const [mountain, updateMountain] = useImmer({
     name: "Mount Everest",
     values: {
       altitude: 8848,
@@ -10,11 +12,35 @@ export default function Form() {
     },
   });
 
-  function handleNameChange(event) {}
+  function handleNameChange(event) {
+    updateMountain((prevMountain) => {
+      prevMountain.name = event.target.value
+    })
+    // setMountain((prevMountain) => ({
+    //   ...prevMountain,
+    //   name: event.target.value,
+    // }));
+  }
 
-  function handleAltitudeChange(event) {}
+  function handleAltitudeChange(event) {
+    updateMountain(prevMountain => {prevMountain.values.altitude = event.target.value})
+    // setMountain((prevMountain) => ({
+    //   ...prevMountain,
+    //   values: {
+    //     ...prevMountain.values,
+    //   altitude: event.target.value}
+    // }));
+  }
 
-  function handleMountainRangeChange(event) {}
+  function handleMountainRangeChange(event) {
+    updateMountain(prevMountain => {prevMountain.values.mountainRange = event.target.value})
+    // setMountain((prevMountain) => ({
+    //   ...prevMountain,
+    //   values: {
+    //     ...prevMountain.values,
+    //   mountainRange: event.target.value}
+    // }));
+  }
 
   return (
     <StyledForm>
