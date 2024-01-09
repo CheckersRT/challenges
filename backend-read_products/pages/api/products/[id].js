@@ -10,4 +10,3 @@ export default async function handler(request, response) {
     const product = await Product.findById(id).populate("reviews");
     return response.status(200).json(product)
   }
-}

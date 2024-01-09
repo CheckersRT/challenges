@@ -1,3 +1,4 @@
+
 import dbConnect from "@/db/Connect";
 import Product from "@/db/models/Product";
 
@@ -9,4 +10,3 @@ export default async function handler(request, response) {
   } else {
     return response.status(405).json({ message: "Method not allowed" });
   }
-}

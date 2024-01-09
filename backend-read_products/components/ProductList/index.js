@@ -20,6 +20,8 @@ export default function ProductList() {
         {data.map((product) => (
           <li key={product._id}>
             <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
+          <li key={product.id}>
+            <StyledLink href={`/${product.id}`}>{product.name}</StyledLink>
           </li>
         ))}
       </StyledList>

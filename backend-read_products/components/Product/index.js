@@ -11,6 +11,7 @@ export default function Product() {
   const { data, isLoading } = useSWR(`/api/products/${id}`);
 
   console.log(data)
+
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
